@@ -18,6 +18,18 @@ body {
     min-width: 5000px; */
 }
 
+h3 {
+    margin: 0;
+}
+
+button, input {
+    margin: 1rem;
+}
+
+form {
+    margin: 0;
+}
+
 .row {
     display: flex;
     margin: 0;

@@ -20,8 +20,8 @@ function setState() {
     // Option to set things together from inputs.
     // cols: $('#colSet').val() || 25,
     // rows: $('#rowSet').val() || 25,
-    const rows = 25;
-    const cols = 25;
+    const rows = $('#rowSet').val() || 25;
+    const cols = $('#colSet').val() || 25;
     const yStart = Math.floor(Math.random() * rows);
     const xStart = Math.floor(Math.random() * cols);
 
@@ -203,18 +203,24 @@ $('#newMaze').click(function() {
 
 // Option to change size of maze
 // $('#colSet').on('change', function() {
-//     boardState.cols = $(this).val();
-//     boardState.yStart = Math.floor(Math.random() * $(this).val())
 //     createBoard();
 //     renderBoard();
 // })
 
 // $('#rowSet').on('change', function() {
-//     boardState.rows = $(this).val();
-//     boardState.xStart = Math.floor(Math.random() * $(this).val())
 //     createBoard();
 //     renderBoard();
 // })
+
+$('form').submit(function(event) {
+    event.preventDefault();
+    boardState.cols = $('#colSet').val();
+    boardState.rows = $('#rowSet').val();
+    setState();
+    createBoard();
+    setCurrent();
+    renderBoard();
+});
 
 setState()
 createBoard();

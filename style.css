@@ -1,0 +1,72 @@
+* {
+    margin: 2rem;
+}
+
+body {
+    text-align: center;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 5000px;
+    min-width: 5000px; */
+}
+
+.row {
+    display: flex;
+    margin: 0;
+    /* min-width: 5000px; */
+}
+
+.cell {
+    min-height: 15px;
+    min-width: 15px;
+    margin: 0;
+    padding: 0;
+    background-color: darkgrey;
+}
+.top {
+    border-top: 1px solid black;
+}
+
+.right {
+    border-right: 1px solid black;
+}
+
+.bottom {
+    border-bottom: 1px solid black;
+}
+
+.left {
+    border-left: 1px solid black;
+}
+
+.lw {
+    border-left: 1px solid lightgrey;
+}
+
+.rw {
+    border-right: 1px solid lightgrey;
+}
+
+.tw {
+    border-top: 1px solid lightgrey;
+}
+
+.bw {
+    border-bottom: 1px solid lightgrey;
+}
+
+.visited {
+    background-color: lightgrey;
+}
+
+.highlight {
+    background-color: red;
+}

@@ -13,7 +13,8 @@ boardState = {
     cols: null,
     rows: null,
     xStart: null,
-    yStart: null
+    yStart: null,
+    start: null,
 };
 
 function setState() {
@@ -33,7 +34,8 @@ function setState() {
 
 function setCurrent() {
     current = board[boardState.yStart][boardState.xStart];
-    current.highlight = true
+    current.highlight = true;
+    current.start = 'X'
 }
 
 function createBoard() {
@@ -70,7 +72,7 @@ function renderBoard() {
                     ${col.box[0] ? 'top' : 'tw'} 
                     ${col.box[1] ? 'right' : 'rw'} 
                     ${col.box[2] ? 'bottom' : 'bw'} 
-                    ${col.box[3] ? 'left' : 'lw'}'>
+                    ${col.box[3] ? 'left' : 'lw'}'>${col.start ? col.start : ''}
                 </div>`);
             newRow.append(column);
         });
